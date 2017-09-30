@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+    <script type="text/javascript">
+        var first_name, last_name;
+        var students = [ 
+     {first_name:  'Michael', last_name : 'Jordan'},
+     {first_name : 'John', last_name : 'Rosales'},
+     {first_name : 'Mark', last_name : 'Guillen'},
+     {first_name : 'KB', last_name : 'Tonel'}
+]
+        
+        function fullName (array) {
+            for(i=0; i < array.length; i++) {
+                console.log (students[i].first_name + " " + students[i].last_name);
+            }
+        }
+        
+        fullName(students);
+        
+        //Part II
+        var first_name, last_name;
+        var users = {
+         'Students': [ 
+             {first_name:  'Michael', last_name : 'Jordan'},
+             {first_name : 'John', last_name : 'Rosales'},
+             {first_name : 'Mark', last_name : 'Guillen'},
+             {first_name : 'KB', last_name : 'Tonel'}
+          ],
+         'Instructors': [
+             {first_name : 'Michael', last_name : 'Choi'},
+             {first_name : 'Martin', last_name : 'Puryear'}
+          ]
+ }
+          function fullName (obj) {
+            for(var key in obj) {
+                console.log (user.key);
+        //         for(i=0; i < obj.length; i++)
+        //             var name = users.key[i].first_name + " " + users.key[i].last_name;
+        //             var numLetters = users[i].first_name.length +  users[i].last_name.length;
+        //             console.log (i + " - " + name.toUpperCase() + " - " + numLetters); 
+        //     }
+        // }
+        
+        // fullName(users);      
+        
+        
+        
+        
+    </script>
+</html>
+       
+        }
+        
+        fullName(students); 
+        
+        

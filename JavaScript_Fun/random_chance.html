@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+    <script type="text/javascript">
+        function suckerSlot (num_qtrs, goal){
+            while(num_qtrs > 0) {
+                num_qtrs -= 1;
+                var play = Math.floor(Math.random() * 100);
+                var winning_num = Math.floor(Math.random() * 100);
+                if (play == winning_num) 
+                {
+                    var winning_amt = Math.floor(Math.random() * 51) + 50;
+                    console.log ("You just won!!! " + winning_amt + " more plays have been added to your total!");
+                    num_qtrs = num_qtrs + winning_amt;
+                    var total = num_qtrs*.25
+                    console.log ("You now have $" + total + " to play with!");
+                    if (num_qtrs >= goal) 
+                    {
+                        console.log("You have reached your goal -- I will cash out your $" + total);
+                        break
+                    }
+                }
+                else 
+                {
+                    console.log ("Sorry -- you are not a winner. You have " + num_qtrs +" plays remaining.");
+                }
+                }
+        }
+      suckerSlot(50,100)  
+        
+
+        
+        
+        
+        
+        
+        
+    </script>
+</html>

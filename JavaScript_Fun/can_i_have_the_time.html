@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+    <script>
+        var hr = 4;
+        var minute = 50;
+        var period = "PM";
+        
+        if (minute< 30){
+            hr = hr;
+            minute = "just after";
+        }else {
+            hr = hr+1;
+            minute = "almost";
+        }
+        
+        if (period == "AM") {
+            period = "morning";
+        }else if (period == "PM" && hr < 6) {
+            period = "afternoon";
+        }else {
+            period = "evening"
+        }
+        console.log ("It is " + minute + " " + hr + " in the " + period);
+    </script>
+</html>

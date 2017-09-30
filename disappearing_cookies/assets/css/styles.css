@@ -1,0 +1,25 @@
+body{
+    width: 960px;
+    height: 620px;
+}
+img {
+    height: 134px;
+    width: 200px;
+    float: right;
+    margin: 18px;
+    border: 2px solid black;
+
+}
+
+h1{
+    text-align: center;
+}
+button {
+    background: green;
+    color: white;
+    
+}
+div {
+    width:960px;
+    height: 375px;
+}

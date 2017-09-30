@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+    <script type="text/javascript">
+    //new array of numbers only
+        function numOnly(array) {
+            var newArray = [];
+            for (i=0; i< array.length; i++){
+                if (typeof array[i] === "number") {
+                    newArray.push(array[i]);
+                }
+            }return newArray;
+        }
+     numOnly([1, "apple", -3, "orange", 0.5]);
+     
+     
+     //remove numbers
+        function remNums(array) {
+            for(i=0; i< array.length; i++) {
+                if (typeof array[i] === "number") {
+                    array.splice(i, 1);
+                }
+            }return array;
+        }
+        remNums([1, "apple", -3, "orange", 0.5]);
+    </script>
+</html>
