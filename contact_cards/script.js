@@ -8,7 +8,7 @@ $(document).ready(function() {
         var phone = $("#phone").val();
         var email = $("#email").val();
         $(".cards").append(`
-            <div class="sample"
+            <div class="sample">
                 <h2 id="nice">${first} ${last}</h2>
                 <h5>(toggle details)</h5>
                 <p>Phone: ${phone}</p>
