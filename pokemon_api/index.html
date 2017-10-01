@@ -1,21 +1,19 @@
 <!DOCTYPE html>
 <html>
     <head>
-      
-            <script
-              src="https://code.jquery.com/jquery-3.2.1.js"
-              integrity="sha256-DZAnKJ/6XZ9si04Hgrsxu/8s717jcIzLy3oi35EouyE="
-              crossorigin="anonymous">
-              </script>
-            <script type="text/javascript">
-            
+        <title>Pokemon API</title>
+        <link rel="stylesheet" href="styles.css" type="text/css" />
+        <script src="https://code.jquery.com/jquery-3.2.1.js" integrity="sha256-DZAnKJ/6XZ9si04Hgrsxu/8s717jcIzLy3oi35EouyE="
+        crossorigin="anonymous"> </script>
+        
+        <script type="text/javascript">
             $(function(){
  
-                for(var i = 200; i< 205; i++){
+                for(var i = 200; i< 350; i++){
                 $.get("https://pokeapi.co/api/v1/sprite/"+ i, function success(response) {
                  
             $("#show").append(`<img id="${response.id}" src="https://pokeapi.co/${response.image}">`)
-                }, "json");
+                }, "jsonp");
                 }
                 
                 $("div").on("click","img", function() {
@@ -23,24 +21,22 @@
                         console.log(id);
                       $.get("https://pokeapi.co/api/v1/pokemon/"+ id, function success(res) {
                           console.log(res);
-                          $("#pokedex").html("<p>name: " + res.name + "</p><p>height: " + res.height + "</p><p>height: " + res.weight + "</p>");    
+                          $("#pokedex").html("<div class='enhance'><p>Name:  " + res.name + "</p><p>Height:  " + res.height + "</p><p>Weight: " + res.weight + "</p></div>");    
                 })})
                 
                 });
             
-            </script> 
+        </script> 
         
     </head>
     <body>
 
-                
-       
+               
+        <div id="show">
+        </div>
+        <div id="pokedex" class="enhance">
+            <h2>Pokedex</h2>
+
+        </div>
     </body>
-    
-    <div id="show">
-    </div>
-    <div id="pokedex">
-        
-    </div>
-    
 </html>
